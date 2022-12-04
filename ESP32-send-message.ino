@@ -1,4 +1,4 @@
-#include <WiFi.h>
+#include <WiFi.h>                                                                                                                //Author : Febin T Rajeev
 #include <ThingESP.h>
 
 #ifdef __cplusplus
@@ -18,7 +18,7 @@ String result = tem + cell;
 int b = 4+4;
 String l=String(b, DEC);;
 
-ThingESP32 thing("febin", "esp32whatsapp", "123456789");
+ThingESP32 thing("username", "project_name", "credentials");
 
 int LED = 2;
 
@@ -31,7 +31,7 @@ void setup()
 
     pinMode(LED, OUTPUT);
 
-    thing.SetWiFi("nemesis", "87654321");
+    thing.SetWiFi("wifi_ssid", "wifi_password");
 
     thing.initDevice();   
     
@@ -78,7 +78,7 @@ String HandleResponse(String query)
         return "3.14";
         
     }
-else if (query == "youtube")
+    else if (query == "youtube")
     {
      
         return "https://www.youtube.com/";
